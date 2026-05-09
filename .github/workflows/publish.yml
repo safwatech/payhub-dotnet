@@ -18,6 +18,15 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
+      - name: Stage shared test vectors at the path tests expect
+        run: |
+          # tests/Payhub.Tests/Payhub.Tests.csproj references
+          # ..\..\..\shared	est-vectors\... — three levels up from
+          # the test csproj. On the monorepo that's sdks/shared/...;
+          # on the mirror it's parent-of-mirror/shared/. Stage the
+          # vectors there.
+          mkdir -p ../shared
+          cp -R vendor/shared/test-vectors ../shared/
       - run: dotnet restore
       - run: dotnet build -c Release --no-restore
       - run: dotnet test -c Release --no-build

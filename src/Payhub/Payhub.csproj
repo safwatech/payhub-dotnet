@@ -15,7 +15,7 @@
     <Product>PayHub .NET SDK</Product>
     <Description>Official PayHub SDK for .NET — payments, webhooks, idempotent retries against the PayHub v1 API.</Description>
     <PackageProjectUrl>https://payhub.ly</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/safwatech/payhub</RepositoryUrl>
+    <RepositoryUrl>https://github.com/safwatech/payhub-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>payhub;payments;libya;sadad;moamalat;mobicash;tlync</PackageTags>
